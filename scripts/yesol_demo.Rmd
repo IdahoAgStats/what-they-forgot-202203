@@ -1,0 +1,16 @@
+---
+title: "Yesol_demo"
+author: "Yesol Sapozhnikov"
+date: "2/22/2022"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(here)
+```
+
+```{r}
+df <- read_csv("../data/iris_data.csv")
+df <- read_csv(here("data","iris_data.csv"))
+```
