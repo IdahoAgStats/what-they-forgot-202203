@@ -4,6 +4,6 @@ packages <- c("here", "renv", "reprex", "devtools")
 install.packages(packages)
 all(lapply(packages, library, character.only = TRUE))
 
-# instal `lookup`
+# install `lookup`
 
 devtools::install_github("jimhester/lookup")
