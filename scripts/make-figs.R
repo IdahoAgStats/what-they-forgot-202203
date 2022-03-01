@@ -10,6 +10,7 @@
 # press and hold Fn key on keyboard
 # load packages
 library(here)
+library(ggplot2)
 
 # load data
 iris.df <- read.csv(here("data","data.csv"))
@@ -36,3 +37,16 @@ boxplot(irisVir[,1:4],
         las=2, 
         col=topo.colors(4))
 dev.off()
+
+# let's make a pretty density plot of sepal width
+# reference: https://www.publichealth.columbia.edu/sites/default/files/media/fdawg_ggplot2.html
+density <- ggplot(data=iris.df, 
+                  aes(x=sepal_width, fill=species))
+density + geom_density(stat="density", 
+                       alpha=I(0.2)) +
+  xlab("Sepal Width") +  
+  ylab("Density") + 
+  ggtitle("Density Curve of Sepal Width by Species")
+
+# save the pretty plot
+ggsave(here("figs","sepal-widith_bySpecies.png"))
