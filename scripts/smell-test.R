@@ -21,3 +21,6 @@ attributes(iris)
 
 # get some summary stats
 summary(iris)
+
+# exploratory plot
+plot(iris)
