@@ -1,0 +1,17 @@
+---
+title: "To do"
+output: html_notebook
+---
+
+## Objectives
+
+March 1, 2022
+
+- Build a sample project
+- Practice breaking up logic & output
+  - Scripts
+  - Temporary files
+  - Final report
+- Attempt version control
+- Push to github
+- Be satisfied with my progress
