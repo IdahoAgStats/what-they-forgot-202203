@@ -1,12 +1,12 @@
-# input: data.csv
+# input: data/data.csv
 # code: make-figs.R
-# output: figs/*
+# output: outputs/*
 
 # objective: let's build boxplots to further explore data
 # reference: https://medium.com/@data_datum/r-for-newbies-explore-the-iris-dataset-with-r-16d1987f9edd
 
 # clear R
-# keyboard shortcut Ctrl+Shift+F10 | cmd+shift+f10
+# keyboard shortcut Ctrl+Shift+F10 | cmd+shift+f10 (cmd+shift+fn+f10 if touchbar)
 # press and hold Fn key on keyboard
 # load packages
 library(here)
@@ -21,7 +21,7 @@ irisSet <- subset(iris.df, species == "setosa")
 irisVir <- subset(iris.df, species == "virginica")
 
 # plot data using base R
-png(here("figs","all_bySpecies.png"))
+png(here("outputs","all_bySpecies.png"))
 par(mfrow=c(1,3),mar=c(6,3,2,1))
 boxplot(irisVer[,1:4], 
         main="versicolor",
@@ -49,4 +49,4 @@ density + geom_density(stat="density",
   ggtitle("Density Curve of Sepal Width by Species")
 
 # save the pretty plot
-ggsave(here("figs","sepal-widith_bySpecies.png"))
+ggsave(here("outputs","sepal-widith_bySpecies.png"))
