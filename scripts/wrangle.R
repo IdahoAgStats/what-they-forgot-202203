@@ -18,7 +18,7 @@ df.iris <- as_tibble(iris)
 # rename variables
 # reference: https://en.wikipedia.org/wiki/Snake_case
 # pipe: Ctrl + shift + M on Windows; Cmd + Shift + M on Mac
-colnames(df.iris) <- df.iris %>%
+colnames(df.iris) <- df.iris %>% 
   colnames() %>%
   str_to_lower() %>%
   str_replace_all("\\.","_")
