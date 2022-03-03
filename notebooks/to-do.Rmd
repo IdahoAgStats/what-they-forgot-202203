@@ -15,3 +15,8 @@ March 1, 2022
 - Attempt version control
 - Push to github
 - Be satisfied with my progress
+
+March 3, 2022
+
+- Finish up project flow
+- Be satisifed with our progress
