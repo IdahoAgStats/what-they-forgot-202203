@@ -9,11 +9,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r packagres, include=FALSE}
+library(here)
+library(ggplot2)
+```
+
 ## Iris sepal and petal analyses
 
 Plotted sepal and petal length and width by species
 
-```{r iris}
+```{r iris, echo=FALSE}
 knitr::include_graphics(here("outputs/","all_bySpecies.png"))
 ```
 
