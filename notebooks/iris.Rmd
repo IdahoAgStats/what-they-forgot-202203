@@ -1,0 +1,38 @@
+---
+title: "Sample workflow using Iris dataset"
+author: "Breanna Sipley"
+date: "3/3/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Iris sepal and petal analyses
+
+Plotted sepal and petal length and width by species
+
+```{r iris}
+knitr::include_graphics(here("outputs/","all_bySpecies.png"))
+```
+
+```{r iris_sepal}
+knitr::include_graphics(here("outputs","sepal-widith_bySpecies.png"))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+iris.df <- read.csv(here("data","data.csv"))
+density <- ggplot(data=iris.df, 
+                  aes(x=sepal_width, fill=species))
+density + geom_density(stat="density", 
+                       alpha=I(0.2)) +
+  xlab("Sepal Width") +  
+  ylab("Density") + 
+  ggtitle("Density Curve of Sepal Width by Species")
+
+```
