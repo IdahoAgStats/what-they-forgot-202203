@@ -1,6 +1,6 @@
 # input: raw data
 # code: wrangle.R
-# output: data.csv
+# output: data/data.csv
 
 # reference: https://www.r-bloggers.com/2017/08/simple-practice-data-wrangling-the-iris-dataset/
 
